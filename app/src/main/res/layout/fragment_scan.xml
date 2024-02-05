@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+   android:background="@color/white"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainScanLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:visibility="gone"
+
+
+        >
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_15sdp"
+            android:elevation="@dimen/_1sdp"
+            android:orientation="horizontal"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/torch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/torchImage"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/torch_icon"
+
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/torchText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_weight="1"
+
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:text="@string/light"
+                    android:textAlignment="center"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:textColor="@color/whiteColorForBothThemes"
+                    android:textSize="@dimen/_11ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/scanImage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/scanImageIcon"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/scan_image_icon"
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/scanImageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_weight="1"
+
+
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:text="@string/scanImage"
+                    android:textAlignment="center"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:textColor="@color/whiteColorForBothThemes"
+                    android:textSize="@dimen/_11ssp"
+
+                    />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/help"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/helpLogo"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center"
+
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/help_icon"
+
+
+                    />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/helpText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_weight="1"
+
+
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:text="@string/help"
+                    android:textAlignment="center"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+                    android:textColor="@color/whiteColorForBothThemes"
+                    android:textSize="@dimen/_11ssp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/suggestionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/mainBackGroundColorGreen"
+
+            android:text="@string/placeCameraFarer"
+            android:textColor="@color/whiteColorForBothThemes"
+
+            android:textSize="@dimen/_10ssp"
+            android:elevation="5dp"
+
+
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_3sdp"
+
+            android:fontFamily="@font/poppins_regular"
+
+
+            app:layout_constraintTop_toBottomOf="@id/tabs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+        <View
+            android:id="@+id/img_qr_box"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/barcode_scanner_view"
+            android:elevation="5dp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent="0.7"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/suggestionText"
+            app:layout_constraintBottom_toTopOf="@id/manualScan"/>
+
+        <View
+            android:id="@+id/shadow_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toTopOf="@+id/img_qr_box"
+            app:layout_constraintEnd_toStartOf="@+id/shadow_right"
+            app:layout_constraintStart_toEndOf="@+id/shadow_left"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/shadow_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/shadow_right"
+            app:layout_constraintStart_toEndOf="@+id/shadow_left"
+            app:layout_constraintTop_toBottomOf="@+id/img_qr_box"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/shadow_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_qr_box"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <View
+            android:id="@+id/shadow_right"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-4dp"
+            android:background="@color/nonScanableAreaColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/previewView"
+            app:layout_constraintStart_toEndOf="@+id/img_qr_box"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/manualScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/mainBackGroundColorGreen"
+
+            android:text="@string/barcodeFoundPressMeToViewResult"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/whiteColorForBothThemes"
+
+            android:visibility="gone"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+
+            android:elevation="5dp"
+           android:layout_marginBottom="@dimen/_8sdp"
+
+            app:layout_constraintBottom_toTopOf="@id/seekBarHolder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/seekBarHolder"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_20sdp"
+
+
+
+            android:layout_marginBottom="@dimen/_10sdp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintWidth_percent="0.75">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/zoomOutIcon"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/zoom_in_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:max="40"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:progress="0"
+
+
+                android:progressBackgroundTint="#B39A76"
+                android:progressTint="@color/tabSelecterColor"
+                android:thumbTint="@color/tabSelecterColor"
+
+                app:layout_constraintBottom_toBottomOf="@id/zoomInIcon"
+                app:layout_constraintEnd_toStartOf="@id/zoomInIcon"
+                app:layout_constraintStart_toEndOf="@id/zoomOutIcon"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/zoomInIcon"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:src="@drawable/zoom_out_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scanUsingCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_riple_rounded"
+        android:backgroundTint="@color/mainBackGroundColorGreen"
+
+        android:elevation="@dimen/_5sdp"
+
+        android:visibility="visible"
+
+
+android:layout_marginHorizontal="@dimen/_10sdp"
+
+
+
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cameraIcon"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_margin="@dimen/_12sdp"
+
+            android:src="@drawable/camera_icon"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cameraText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+
+            android:fontFamily="@font/poppins_regular"
+
+
+            android:text="@string/scanUsingCamera"
+            android:textAlignment="center"
+
+            android:textColor="@color/whiteColorForBothThemes"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/cameraIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@id/cameraIcon"
+            app:layout_constraintTop_toTopOf="@id/cameraIcon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scanUsingImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_riple_rounded"
+
+        style="@style/SelectableButtonsBackground"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:backgroundTint="@color/scanFromGalleryBackgroundColor"
+
+
+
+        android:elevation="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintEnd_toEndOf="@id/scanUsingCamera"
+        app:layout_constraintStart_toStartOf="@id/scanUsingCamera"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/galleryIcon"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_margin="@dimen/_12sdp"
+
+            android:padding="@dimen/_1sdp"
+            android:src="@drawable/gallery_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/galleryText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+
+            android:fontFamily="@font/poppins_regular"
+
+            android:text="@string/scanImage"
+            android:textAlignment="center"
+
+            android:textColor="@color/blackColorForBothThemes"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="@id/galleryIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@id/galleryIcon"
+            app:layout_constraintTop_toTopOf="@id/galleryIcon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

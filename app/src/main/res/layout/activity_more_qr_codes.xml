@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MoreQrCodesAct">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBackGroundColorGreen"
+        app:contentInsetStart="0dp"
+
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentClipboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_7sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_icon"
+
+                app:layout_constraintBottom_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="@dimen/_18sdp"
+
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+
+                android:text="@string/moreQrCodes"
+
+                android:paddingHorizontal="@dimen/_1sdp"
+
+
+                android:textColor="@color/whiteColorForBothThemes"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:background="@color/white"
+
+        android:layout_marginBottom="@dimen/_3sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ad_Linear_Layout"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/textQr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/textQrLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:src="@drawable/text_icon"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:padding="@dimen/_3sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:text="@string/text"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+
+                    app:layout_constraintTop_toTopOf="@id/textQrLogo"
+                    app:layout_constraintStart_toEndOf="@id/textQrLogo"
+                    app:layout_constraintBottom_toBottomOf="@id/textQrLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/emailQr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+
+                android:paddingHorizontal="@dimen/_1sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                app:layout_constraintTop_toBottomOf="@id/textQr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/emailQrLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+                    android:src="@drawable/email_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:text="@string/email"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:gravity="center_vertical"
+
+                    app:layout_constraintTop_toTopOf="@id/emailQrLogo"
+                    app:layout_constraintStart_toEndOf="@id/emailQrLogo"
+                    app:layout_constraintBottom_toBottomOf="@id/emailQrLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/smsQr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                app:layout_constraintTop_toBottomOf="@id/emailQr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/smsQrLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/sms_icon"
+                    android:padding="@dimen/_6sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:text="@string/sms"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:gravity="center_vertical"
+
+                    app:layout_constraintTop_toTopOf="@id/smsQrLogo"
+                    app:layout_constraintStart_toEndOf="@id/smsQrLogo"
+                    app:layout_constraintBottom_toBottomOf="@id/smsQrLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/appQr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                app:layout_constraintTop_toBottomOf="@id/smsQr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appQrLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+                    android:src="@drawable/qr_app_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+
+                    android:text="@string/app"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+
+                    app:layout_constraintTop_toTopOf="@id/appQrLogo"
+                    app:layout_constraintStart_toEndOf="@id/appQrLogo"
+                    app:layout_constraintBottom_toBottomOf="@id/appQrLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:id="@+id/ad_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+
+        <include
+            android:id="@+id/shimmerLayout"
+            layout="@layout/shimmer_big_native_two"
+            android:visibility="gone"
+            />
+
+
+        <FrameLayout
+            android:id="@+id/adContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

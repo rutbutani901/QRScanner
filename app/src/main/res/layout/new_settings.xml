@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SettingsFrag"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/premium_gradient_drawable"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/premiumIcon"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/premium_icon"
+
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/premiumIconBackgroundColor"
+
+
+                android:padding="@dimen/_5sdp"
+
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/premiumText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/premiumFeatures"
+                android:textColor="@color/whiteColorForBothThemes"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/poppins_medium"
+
+
+                android:paddingEnd="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/premiumIcon"
+                app:layout_constraintEnd_toStartOf="@id/goPremiumIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/goPremiumIcon"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/forward_icon"
+                android:tint="@color/whiteColorForBothThemes"
+
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

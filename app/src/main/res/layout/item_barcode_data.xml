@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:id="@+id/mainBarcodeDataLayout"
+
+
+    android:layout_marginBottom="@dimen/_8sdp"
+
+    style="@style/SelectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+
+    android:paddingStart="@dimen/_12sdp"
+    android:paddingTop="@dimen/_6sdp"
+    android:paddingEnd="@dimen/_12sdp"
+    android:paddingBottom="@dimen/_6sdp"
+
+    android:background="@color/white"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barcodeIcon"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/mainBackGroundColorGreen"
+        android:padding="@dimen/_8sdp"
+
+        app:layout_constraintBottom_toBottomOf="@id/createdDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barcodeValue"
+
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/barcodeValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingEnd="@dimen/_8sdp"
+
+        android:singleLine="true"
+
+
+        android:text="192651029872"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+
+        app:layout_constraintBottom_toTopOf="@id/barcodeNote"
+        app:layout_constraintEnd_toStartOf="@id/favIcon"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/barcodeNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+
+        android:ellipsize="end"
+
+        android:fontFamily="@font/poppins_regular"
+        android:paddingEnd="@dimen/_8sdp"
+
+        android:singleLine="true"
+        android:text="hii hello"
+        android:textColor="@color/mainBackGroundColorGreen"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintBottom_toTopOf="@id/createdDate"
+        app:layout_constraintEnd_toStartOf="@id/favIcon"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintTop_toBottomOf="@id/barcodeValue" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/createdDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+       android:layout_marginTop="@dimen/_1sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/poppins_regular"
+
+        android:paddingEnd="@dimen/_8sdp"
+        android:singleLine="true"
+
+        android:text="192651029872"
+        android:textColor="@color/unselectedThumbColor"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/favIcon"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintTop_toBottomOf="@id/barcodeNote" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/favIcon"
+        android:layout_width="@dimen/_26sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:src="@drawable/star_icon"
+
+        android:tint="@color/itemBarcodeStarColor"
+
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barcodeValue"
+        app:layout_constraintBottom_toBottomOf="@id/createdDate"
+
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

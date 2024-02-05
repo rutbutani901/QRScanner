@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_corners"
+
+    android:paddingVertical="@dimen/_15sdp"
+
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appThemeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appThemeLogo"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+
+            android:src="@drawable/app_theme_logo"
+            android:tint="@color/mainBackGroundColorGreen"
+
+            app:layout_constraintTop_toTopOf="@id/appThemeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/appThemeText"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appThemeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/appTheme"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppins_medium"
+
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_1sdp"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/appThemeLogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/systemTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/appThemeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/systemThemeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/systemDefault"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppins_regular"
+
+            android:paddingEnd="@dimen/_1sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/systemThemeLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/systemThemeLogo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:src="@drawable/on_radio_button"
+
+            android:tint="@color/mainBackGroundColorGreen"
+
+            android:padding="@dimen/_2sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/systemThemeText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lightTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/systemTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lightThemeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/light"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppins_regular"
+
+
+            android:paddingEnd="@dimen/_1sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/lightThemeLogo"
+             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/lightThemeLogo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:src="@drawable/off_radio_button"
+            android:tint="@color/unselectedThumbColor"
+
+            android:padding="@dimen/_2sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/lightThemeText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/darkTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/lightTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/darkThemeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/dark"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppins_regular"
+
+
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/darkThemeLogo"
+         app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/darkThemeLogo"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:src="@drawable/off_radio_button"
+            android:tint="@color/unselectedThumbColor"
+
+
+            android:padding="@dimen/_2sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/darkThemeText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/capitalCancel"
+        android:textSize="@dimen/_13ssp"
+        android:padding="@dimen/_3sdp"
+        android:textColor="@color/tabSelecterColor"
+        android:fontFamily="@font/poppins_medium"
+
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/darkTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

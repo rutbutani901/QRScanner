@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.QrEventAct"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBackGroundColorGreen"
+        app:contentInsetStart="0dp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentClipboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_7sdp"
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_icon"
+
+                app:layout_constraintBottom_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="@dimen/_18sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/event"
+
+                android:paddingHorizontal="@dimen/_1sdp"
+
+                android:textColor="@color/whiteColorForBothThemes"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tickButton"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tickButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_3sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:src="@drawable/tick_icon"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ad_Linear_Layout"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/eventTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/eventTitle"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_10sdp"
+
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:singleLine="true"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toStartOf="@id/titleInputErrorIcon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/titleInputErrorIcon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+
+
+                android:visibility="gone"
+                android:src="@drawable/no_input_icon"
+
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="@id/eventTitle"
+                app:layout_constraintBottom_toBottomOf="@id/eventTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/titleDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:dividerColor="@color/dividerColor"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eventTitle" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/customSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:text="@string/allDayEvent"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_18sdp"
+                android:paddingBottom="@dimen/_18sdp"
+                android:paddingEnd="@dimen/_10sdp"
+
+                android:thumb="@drawable/custom_thumb"
+                app:track="@drawable/custom_track"
+                android:background="@null"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/eventTitle"
+
+
+                />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/switchDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:dividerColor="@color/dividerColor"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customSwitch" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/startDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/startDate"
+                android:maxLines="1"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_15sdp"
+
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintTop_toBottomOf="@id/switchDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/startDateInputErrorIcon"
+
+
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/startDateInputErrorIcon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+
+
+                android:visibility="gone"
+                android:src="@drawable/no_input_icon"
+
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="@id/startDate"
+                app:layout_constraintBottom_toBottomOf="@id/startDate"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/startTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/startTime"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+
+
+                android:singleLine="true"
+                android:maxLines="1"
+
+
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/switchDivider"
+                app:layout_constraintEnd_toStartOf="@id/startTimeInputErrorIcon"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/startTimeInputErrorIcon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+
+
+                android:visibility="gone"
+                android:src="@drawable/no_input_icon"
+
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toTopOf="@id/startTime"
+                app:layout_constraintBottom_toBottomOf="@id/startTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/endDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/endDate"
+                android:maxLines="1"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_15sdp"
+
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintTop_toBottomOf="@id/startDateDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/endDateInputErrorIcon"
+
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/endDateInputErrorIcon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+
+
+                android:visibility="gone"
+                android:src="@drawable/no_input_icon"
+
+                android:layout_marginEnd="@dimen/_2sdp"
+                app:layout_constraintTop_toTopOf="@id/endDate"
+                app:layout_constraintBottom_toBottomOf="@id/endDate"
+                app:layout_constraintEnd_toStartOf="@id/guideline3"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/endTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="@string/endTime"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+
+
+                android:singleLine="true"
+                android:maxLines="1"
+
+
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/startDateDivider"
+                app:layout_constraintEnd_toStartOf="@id/endTimeInputErrorIcon"
+                app:layout_constraintStart_toEndOf="@id/guideline3"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/endTimeInputErrorIcon"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+
+
+                android:visibility="gone"
+                android:src="@drawable/no_input_icon"
+
+                android:layout_marginEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toTopOf="@id/endTime"
+                app:layout_constraintBottom_toBottomOf="@id/endTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/startDateDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:dividerColor="@color/dividerColor"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/startDate" />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/endDateDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:dividerColor="@color/dividerColor"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/endDate" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/eventLocation"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppins_regular"
+
+
+                android:singleLine="true"
+                android:maxLines="1"
+
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/endDateDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/locationDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:dividerColor="@color/dividerColor"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/location" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/description"
+
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/poppins_regular"
+
+
+                android:singleLine="true"
+                android:maxLines="1"
+
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_10sdp"
+
+                app:layout_constraintTop_toBottomOf="@id/locationDivider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+                />
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/descriptionDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                app:dividerColor="@color/dividerColor"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:id="@+id/ad_Linear_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+
+
+        <include
+            android:id="@+id/shimmerLayout"
+            layout="@layout/shimmer_big_native_two"
+            android:visibility="gone"
+            />
+
+
+        <FrameLayout
+            android:id="@+id/adContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

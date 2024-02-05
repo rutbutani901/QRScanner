@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp"
+
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:elevation="@dimen/_10sdp"
+
+    android:background="@color/whiteColorForBothThemes"
+
+    >
+
+    <scan.reader.qrscanner.barcodescanner.SquareRLayout
+        android:id="@+id/mainholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:padding="@dimen/_2sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_30sdp"
+                android:scaleType="fitCenter"
+
+                app:shapeAppearanceOverlay="@drawable/rounded_corners"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/supportedCodesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+
+                android:paddingHorizontal="@dimen/_1sdp"
+
+                android:text="Qr"
+
+                android:textColor="@color/blackColorForBothThemes"
+                android:textSize="@dimen/_11ssp"
+
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/icon"
+
+
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/isSupportedIcon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+
+                android:layout_margin="@dimen/_10sdp"
+
+
+                android:background="@drawable/shape_circle"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </scan.reader.qrscanner.barcodescanner.SquareRLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CreateFrag"
+    android:orientation="vertical"
+
+    android:background="@color/white"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/useShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/useShareLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/share_new_icon"
+
+
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/useShareText"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/useShareText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/useShareInOtherApp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/useShareLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentClipboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/clipboardContentLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/clipboard_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/clipboardText"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/clipboardText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/contentFromClipBoard"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/clipboardContentLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/websiteLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/website_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/website"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/websiteLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/contactLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/contact_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/contact"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:gravity="center_vertical"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/contactLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/wifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/wifiLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/wifi_icon"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/wifi"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/wifiLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/locationLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/location_icon"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/location"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/locationLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/eventLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/event_icon"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/event"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/eventLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/moreQRcodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/moreQrLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/other_qrcodes_icon"
+                    android:padding="@dimen/_8sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/moreQrCodes"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/moreQrLogo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/barcodesAndOther"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+
+                style="@style/SelectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/barcodesAndOtherCodesLogo"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/mainBackGroundColorGreen"
+
+                    android:src="@drawable/other_barcode_icon"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/barcodesAndOther2dCodes"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+
+
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:paddingHorizontal="@dimen/_1sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/barcodesAndOtherCodesLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

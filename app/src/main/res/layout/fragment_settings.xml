@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SettingsFrag"
+
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/premium_gradient_drawable"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/premiumIcon"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/premium_icon"
+
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/premiumIconBackgroundColor"
+
+
+                android:padding="@dimen/_5sdp"
+
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/premiumText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/premiumFeatures"
+                android:textColor="@color/whiteColorForBothThemes"
+                android:textSize="@dimen/_13ssp"
+                android:fontFamily="@font/poppins_medium"
+
+
+                android:paddingEnd="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/premiumIcon"
+                app:layout_constraintEnd_toStartOf="@id/goPremiumIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/goPremiumIcon"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/forward_icon"
+                android:tint="@color/whiteColorForBothThemes"
+
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+
+            android:background="@drawable/setting_frag_bg_gradient"
+
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/premium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/generalsetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/generalSettingIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/general_setting_icon"
+
+                        android:tint="@color/mainBackGroundColorGreen"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/generalSettingText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/generalSettings"
+                        android:textColor="@color/mainBackGroundColorGreen"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/generalSettingIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/generalsetting"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/themeIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/light_theme_icon"
+
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="@id/themeText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/themeType"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/themeText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/theme"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+
+                        android:gravity="top"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/themeIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/themeType"
+
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/themeType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/light"
+                        android:textColor="@color/unselectedThumbColor"
+                        android:textSize="@dimen/_11ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:layout_constraintTop_toBottomOf="@id/themeText"
+                        app:layout_constraintStart_toEndOf="@id/themeIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/helpFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/theme"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/helpFeedbackIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/help_feedback_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/helpFeedbackText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/helpAndFeedBack"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/helpFeedbackIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/firstDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+
+                    android:background="@color/dividerColor"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@id/helpFeedback"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scanControls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+
+                    app:layout_constraintTop_toBottomOf="@id/firstDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/scanControlsIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/scan_icon"
+                        android:tint="@color/mainBackGroundColorGreen"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/scanControlsText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/scanControls"
+                        android:textColor="@color/mainBackGroundColorGreen"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/scanControlsIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/openWebsiteAutomatically"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/scanControls"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/openWebsiteAutomaticallyIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/open_website_icon"
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:tint="@color/unselectedThumbColor"
+                        app:layout_constraintTop_toTopOf="@id/openWebsiteAutomaticallyText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/openWebsiteAutomaticallyText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/openWebsiteAutomaticallyText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/openWebsiteAuto"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/openWebsiteAutomaticallyIcon"
+                        app:layout_constraintEnd_toStartOf="@id/openWebsiteAutomaticallySwitch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/openWebsiteAutomaticallySwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/openWebsiteAutomaticallyText"
+                        app:layout_constraintBottom_toBottomOf="@id/openWebsiteAutomaticallyText"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/continuousScanning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/openWebsiteAutomatically"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/continuousScanningIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/continous_scanning_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="@id/continuousScanningTitle"
+                        app:layout_constraintBottom_toBottomOf="@id/continuousScanningMessage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/continuousScanningTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/continousScanning"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+                        android:gravity="top"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/continuousScanningIcon"
+                        app:layout_constraintEnd_toStartOf="@id/continousScanningPremiumIcon"
+                        app:layout_constraintBottom_toTopOf="@id/continuousScanningMessage"
+
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/continuousScanningMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/addScansToHistoryOnly"
+                        android:textColor="@color/unselectedThumbColor"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="bottom"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:layout_constraintTop_toBottomOf="@id/continuousScanningTitle"
+                        app:layout_constraintStart_toEndOf="@id/continuousScanningIcon"
+                        app:layout_constraintEnd_toStartOf="@id/continousScanningPremiumIcon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/continousScanningPremiumIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/premium_icon"
+
+                       android:layout_marginEnd="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="@id/continuousScanningTitle"
+                        app:layout_constraintEnd_toStartOf="@id/continousScanningSwitch"
+                        app:layout_constraintBottom_toBottomOf="@id/continuousScanningMessage"
+                        />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/continousScanningSwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/continuousScanningTitle"
+                        app:layout_constraintBottom_toBottomOf="@id/continuousScanningMessage"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/duplicateBarcodes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/continuousScanning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/duplicateBarcodesIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/duplicate_barcodes_setting_icon"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+android:scaleType="centerCrop"
+                        android:tint="@color/unselectedThumbColor"
+                        app:layout_constraintTop_toTopOf="@id/duplicateBarcodesTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/duplicateBarcodesMessage"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/duplicateBarcodesTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/duplicateBarcodes"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="top"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/duplicateBarcodesIcon"
+                        app:layout_constraintEnd_toStartOf="@id/duplicateBarcodesPremiumIcon"
+                        app:layout_constraintBottom_toTopOf="@id/duplicateBarcodesMessage"
+
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/duplicateBarcodesMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/storeDuplicateBarcodes"
+                        android:textColor="@color/unselectedThumbColor"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="bottom"
+
+
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:layout_constraintTop_toBottomOf="@id/duplicateBarcodesTitle"
+                        app:layout_constraintStart_toEndOf="@id/duplicateBarcodesIcon"
+                        app:layout_constraintEnd_toStartOf="@id/duplicateBarcodesPremiumIcon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/duplicateBarcodesPremiumIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/premium_icon"
+
+                       android:layout_marginEnd="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="@id/duplicateBarcodesTitle"
+                        app:layout_constraintEnd_toStartOf="@id/duplicateBarcodesSwitch"
+                        app:layout_constraintBottom_toBottomOf="@id/duplicateBarcodesMessage"
+                        />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/duplicateBarcodesSwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+                        android:checked="true"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/duplicateBarcodesTitle"
+                        app:layout_constraintBottom_toBottomOf="@id/duplicateBarcodesMessage"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/confirmScansManually"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/duplicateBarcodes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/confirmScansManuallyIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/confirm_scans_manually_icon"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:tint="@color/unselectedThumbColor"
+
+                        app:layout_constraintTop_toTopOf="@id/confirmScansManuallyTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/confirmScansManuallyMessage"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/confirmScansManuallyTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/confirmScanManually"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="top"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/confirmScansManuallyIcon"
+                        app:layout_constraintEnd_toStartOf="@id/confirmScansManuallyPremiumIcon"
+                        app:layout_constraintBottom_toTopOf="@id/confirmScansManuallyMessage"
+
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/confirmScansManuallyMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/avoidAccidentalScan"
+                        android:textColor="@color/unselectedThumbColor"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="bottom"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:layout_constraintTop_toBottomOf="@id/confirmScansManuallyTitle"
+                        app:layout_constraintStart_toEndOf="@id/confirmScansManuallyIcon"
+                        app:layout_constraintEnd_toStartOf="@id/confirmScansManuallyPremiumIcon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/confirmScansManuallyPremiumIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/premium_icon"
+
+                       android:layout_marginEnd="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="@id/confirmScansManuallyTitle"
+                        app:layout_constraintEnd_toStartOf="@id/confirmScansManuallySwitch"
+                        app:layout_constraintBottom_toBottomOf="@id/confirmScansManuallyMessage"
+                        />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/confirmScansManuallySwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/confirmScansManuallyTitle"
+                        app:layout_constraintBottom_toBottomOf="@id/confirmScansManuallyMessage"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/playSound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/confirmScansManually"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/playSoundIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/play_sound_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/playSoundText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/playSoundText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/playSoundText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/playSound"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/playSoundIcon"
+                        app:layout_constraintEnd_toStartOf="@id/playSoundSwitch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/playSoundSwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/playSoundText"
+                        app:layout_constraintBottom_toBottomOf="@id/playSoundText"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/vibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                     android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/playSound"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/vibrateIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/vibrate_icon"
+
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/vibrateText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/vibrateText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/vibrateText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/vibrateOnScan"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/vibrateIcon"
+                        app:layout_constraintEnd_toStartOf="@id/vibrateSwitch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/vibrateSwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/vibrateText"
+                        app:layout_constraintBottom_toBottomOf="@id/vibrateText"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/copyToClipboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/vibrate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/copyToClipboardIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/clipboard_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/copyToClipboardText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/copyToClipboardText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/copyToClipboardText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/copyToClipBoard"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/copyToClipboardIcon"
+                        app:layout_constraintEnd_toStartOf="@id/copyToClipboardSwitch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/copyToClipboardSwitch"
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+
+
+                        android:thumb="@drawable/custom_small_thumb_for_setting"
+                        app:track="@drawable/custom_small_track_for_setting"
+                        android:background="@null"
+
+                        android:clickable="false"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/copyToClipboardText"
+                        app:layout_constraintBottom_toBottomOf="@id/copyToClipboardText"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cameraOrientation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/copyToClipboard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cameraOrientationIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/scan_image_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+
+                        app:layout_constraintTop_toTopOf="@id/cameraOrientationTitle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/cameraOrientationMessage"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/cameraOrientationTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/cameraOrientation"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+
+                        android:gravity="top"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/cameraOrientationIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/cameraOrientationMessage"
+
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/cameraOrientationMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/backCameraRecomd"
+                        android:textColor="@color/unselectedThumbColor"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:gravity="bottom"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:layout_constraintTop_toBottomOf="@id/cameraOrientationTitle"
+                        app:layout_constraintStart_toEndOf="@id/cameraOrientationIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/secondDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+
+                    android:background="@color/dividerColor"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@id/cameraOrientation"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/otherSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp"
+
+                    app:layout_constraintTop_toBottomOf="@id/secondDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/otherSettingIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/other_setting_icon"
+                        android:tint="@color/mainBackGroundColorGreen"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/otherSettingText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/otherSetting"
+                        android:textColor="@color/mainBackGroundColorGreen"
+                        android:textSize="@dimen/_13ssp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/otherSettingIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/otherSetting"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/languageIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/language_icon"
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/languageText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/languageText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/languageText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/language"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/languageIcon"
+                       app:layout_constraintEnd_toStartOf="@id/languageGo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/languageGo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/forward_icon"
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+                      android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="@id/languageText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/languageText"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/language"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/rateIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/rate_icon"
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/rateText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/rateText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/rateText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/rateUs"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/rateIcon"
+                       app:layout_constraintEnd_toStartOf="@id/rateGo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/rateGo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/forward_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                      android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="@id/rateText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/rateText"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/rate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/shareIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/share_icon"
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/shareText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/shareText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/shareText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/shareApp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/shareIcon"
+                       app:layout_constraintEnd_toStartOf="@id/shareGo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                      android:id="@+id/shareGo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/forward_icon"
+                        android:tint="@color/unselectedThumbColor"
+                        android:layout_marginStart="@dimen/_8sdp"
+                      android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="@id/shareText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/shareText"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/privacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/share"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                      android:id="@+id/privacyPolicyIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/privacy_policy_icon"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        android:tint="@color/unselectedThumbColor"
+
+                        app:layout_constraintTop_toTopOf="@id/privacyPolicyText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/privacyPolicyText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                      android:id="@+id/privacyPolicyText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/privacyPolicy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/privacyPolicyIcon"
+                      app:layout_constraintEnd_toStartOf="@id/privacyPolicyGo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/privacyPolicyGo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/forward_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                      android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="@id/privacyPolicyText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/privacyPolicyText"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/feedBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                  android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/privacyPolicy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                      android:id="@+id/feedBackIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/feedback_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="@id/feedBackText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/feedBackText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/feedBackText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/feedBack"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/feedBackIcon"
+                       app:layout_constraintEnd_toStartOf="@id/feedbackGo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/feedbackGo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/forward_icon"
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                      android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="@id/feedBackText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/feedBackText"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/thirdDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+
+                    android:background="@color/dividerColor"
+
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintTop_toBottomOf="@id/feedBack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    app:layout_constraintTop_toBottomOf="@id/thirdDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/introductionIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/introduction_icon"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        android:tint="@color/unselectedThumbColor"
+
+                        app:layout_constraintTop_toTopOf="@id/introductionText"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/introductionText"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/introductionText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/introduction"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/introductionIcon"
+                        app:layout_constraintEnd_toStartOf="@id/introductionGo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/introductionGo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/forward_icon"
+
+                        android:tint="@color/unselectedThumbColor"
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="@id/introductionText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/introductionText"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/appVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+
+                    style="@style/SelectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@id/introduction"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appVersionIcon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/qr_app_icon"
+
+
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:tint="@color/unselectedThumbColor"
+
+                        app:layout_constraintTop_toTopOf="@id/appVersionTitle"
+                        app:layout_constraintBottom_toBottomOf="@id/appVersionMessage"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/appVersionTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="@string/appVersion"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+                        android:gravity="top"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/appVersionIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/appVersionMessage"
+
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/appVersionMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="2.8.0"
+                        android:textColor="@color/unselectedThumbColor"
+                        android:textSize="@dimen/_10ssp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:gravity="bottom"
+
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        app:layout_constraintTop_toBottomOf="@id/appVersionTitle"
+                        app:layout_constraintStart_toEndOf="@id/appVersionIcon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</ScrollView>

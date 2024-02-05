@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_corners"
+
+    android:paddingVertical="@dimen/_15sdp"
+
+android:backgroundTint="@color/fragmentBgColor"
+
+    >
+
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cameraPermissionMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pickingContactPermissionMessage"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/poppins_regular"
+
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/capitalCancel"
+        android:textColor="@color/scrollBarThumbColor"
+        android:textSize="@dimen/_13ssp"
+        android:padding="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/poppins_medium"
+
+        android:gravity="end"
+
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/cameraPermissionMessage"
+        app:layout_constraintEnd_toStartOf="@id/ok"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capitalOk"
+        android:textColor="@color/scrollBarThumbColor"
+        android:textSize="@dimen/_13ssp"
+        android:padding="@dimen/_3sdp"
+        android:fontFamily="@font/poppins_medium"
+
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/cameraPermissionMessage"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

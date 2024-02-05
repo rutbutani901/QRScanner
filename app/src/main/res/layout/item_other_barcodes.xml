@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    style="@style/SelectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+
+    android:layout_marginTop="@dimen/_3sdp"
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_10sdp"
+    android:paddingTop="@dimen/_6sdp"
+    android:paddingBottom="@dimen/_6sdp"
+    android:background="@color/white"
+
+    >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/barcodeIcon"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+
+
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/mainBackGroundColorGreen"
+
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/barcodeName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_regular"
+
+
+        android:gravity="start"
+
+        android:paddingHorizontal="@dimen/_1sdp"
+
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintBottom_toTopOf="@id/barcodeDescription"
+
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/barcodeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="text"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/unselectedThumbColor"
+        android:fontFamily="@font/poppins_regular"
+
+
+        android:gravity="bottom"
+
+        android:paddingHorizontal="@dimen/_1sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/barcodeName"
+        app:layout_constraintStart_toEndOf="@id/barcodeIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

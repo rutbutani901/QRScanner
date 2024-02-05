@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PurchaseAct"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:src="@drawable/ic_subscription_bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/crossMark"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/mainBackGroundColorGreen"
+
+        android:src="@drawable/cross_icon"
+        android:tint="@color/whiteColorForBothThemes"
+
+        android:padding="@dimen/_3sdp"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/oneTimePurchase"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/mainBackGroundColorGreen"
+        android:fontFamily="@font/poppins_medium"
+
+        android:layout_marginHorizontal="@dimen/_10sdp"
+
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/message"
+
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/noSubscription"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+
+
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/price"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noAds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/noAdsIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/no_ads_icon"
+                android:tint="@color/mainBackGroundColorGreen"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/noAdsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/noMoreAds"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:paddingEnd="@dimen/_3sdp"
+
+                android:maxLines="2"
+                android:ellipsize="end"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/noAdsIcon"
+                app:layout_constraintEnd_toStartOf="@id/noAdsTickIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/noAdsTickIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/tick_icon"
+                android:tint="@color/unselectedThumbColor"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/continousScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/noAds"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/continousScanIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/continous_scanning_icon"
+                android:tint="@color/mainBackGroundColorGreen"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/continousScanIconText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/continousScanning"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:paddingEnd="@dimen/_3sdp"
+
+                android:maxLines="2"
+                android:ellipsize="end"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/continousScanIcon"
+                app:layout_constraintEnd_toStartOf="@id/continousScanTickIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/continousScanTickIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/tick_icon"
+                android:tint="@color/unselectedThumbColor"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/removeDuplicateBarcodes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/continousScan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/removeDuplicateBarcodesIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/other_qrcodes_icon"
+                android:tint="@color/mainBackGroundColorGreen"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/removeDuplicateBarcodesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/removeDuplicateBarcodes"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:paddingEnd="@dimen/_3sdp"
+
+                android:maxLines="2"
+                android:ellipsize="end"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/removeDuplicateBarcodesIcon"
+                app:layout_constraintEnd_toStartOf="@id/removeDuplicateBarcodesTickIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/removeDuplicateBarcodesTickIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/tick_icon"
+                android:tint="@color/unselectedThumbColor"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scanManually"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_13sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/removeDuplicateBarcodes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scanManuallyIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/scan_icon"
+                android:tint="@color/mainBackGroundColorGreen"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/scanManuallyText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/confirmScanManually"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:paddingEnd="@dimen/_3sdp"
+                android:maxLines="2"
+                android:ellipsize="end"
+
+
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/scanManuallyIcon"
+                app:layout_constraintEnd_toStartOf="@id/scanManuallyTickIcon"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/scanManuallyTickIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+
+
+                android:src="@drawable/tick_icon"
+                android:tint="@color/unselectedThumbColor"
+
+                android:padding="@dimen/_3sdp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/mainBackGroundColorGreen"
+
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_3sdp"
+
+        app:layout_constraintBottom_toTopOf="@id/upGradeNow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/priceText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+
+            android:text="@string/lifeTime"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/whiteColorForBothThemes"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginStart="@dimen/_8sdp"
+
+            android:paddingEnd="@dimen/_3sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/priceValue"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/priceValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="-"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/whiteColorForBothThemes"
+            android:fontFamily="@font/poppins_medium"
+
+            android:layout_marginEnd="@dimen/_8sdp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/upGradeNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        android:background="@drawable/button_ripple_with_border"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_3sdp"
+
+
+        android:text="@string/upgradeNow"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/mainBackGroundColorGreen"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="center"
+
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+
+
+
+        app:layout_constraintBottom_toTopOf="@id/subsmessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subsmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+
+
+        android:text="@string/inAppMessage"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/unselectedThumbColor"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="textStart"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

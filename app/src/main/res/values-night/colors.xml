@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+
+    <color name="white_transparent">#1AFFFFFF</color>
+    <color name="redColor">#F31404</color>
+
+<!--    <color name="datePickerColor">#009688</color>-->
+    <color name="datePickerColor">#0077F0</color>
+    <color name="datePickerButtonsColor">#F0AF51</color>
+
+
+    <color name="scrollBarThumbColor">#F0AF51</color>
+    <color name="zoomSliderUnselectedColor">#B39A76</color>
+
+<!--    <color name="mainBackGroundColorGreen">#009688</color>-->
+    <color name="mainBackGroundColorGreen">#0077F0</color>
+
+    <color name="tabSelecterColor">#F0AF51</color>
+    <color name="lightYello">#F3CB92</color>
+
+    <color name="scannerViewCornerColor">#F0AC48</color>
+
+
+    <color name="nonScanableAreaColor">#A8000000</color><!--    //80000000-->
+    <color name="scanFromGalleryBackgroundColor">#E6E6E6</color>
+
+    <color name="dividerColor">#33818181</color>
+
+    <color name="switchUnselectedTrackColor">#F0F0F0</color>
+    <color name="unselectedThumbColor">#8B8B8B</color>
+    <color name="historyFragmentFirstLayoutBackgroundColor">#333333</color>
+
+    <color name="premiumDrawableGradientStartColor">#673AB7</color>
+    <color name="premiumDrawableGradientEndColor">#E14EDF</color>
+
+    <color name="premiumIconBackgroundColor">#33FFFFFF</color>
+    <color name="switchOnTrackColor">#FFEDD3</color>
+
+
+<!--    <color name="selectedLanguageBackgroundColor">#4D009688</color>-->
+    <color name="selectedLanguageBackgroundColor">#1A0077F0</color>
+
+
+    <color name="adSmallTextGreyColor">#9CA6A6</color>
+    <color name="introScrenButtonBackgroundColor">#80353535</color>
+    <color name="introScrenCircleLightColor">#33FFFFFF</color>
+
+
+
+
+
+    <color name="fragmentBgColor">#3F3E3E</color>
+    <color name="whiteColorForBothThemes">#FFFFFFFF</color>
+    <color name="lowWhite">#F2FFFFFF</color>
+    <color name="languageHolderThemeColors">#803F3E3E</color>
+
+    <color name="itemBarcodeStarColor">#8B8B8B</color>
+    <color name="offRadioGreyColor">#8B8B8B</color>
+
+
+</resources>

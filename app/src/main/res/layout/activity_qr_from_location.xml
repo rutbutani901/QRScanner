@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.QrLocationAct"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBackGroundColorGreen"
+        app:contentInsetStart="0dp"
+        android:paddingVertical="@dimen/_10sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentClipboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_7sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_icon"
+
+                app:layout_constraintBottom_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="@dimen/_18sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/location"
+
+                android:paddingHorizontal="@dimen/_1sdp"
+
+                android:textColor="@color/whiteColorForBothThemes"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/moveToPrevLocation"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/moveToPrevLocation"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_4sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+                android:src="@drawable/current_location_icon"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/currenLocationIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/currenLocationIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_4sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+
+                android:src="@drawable/location_icon"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tickButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tickButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:padding="@dimen/_3sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+
+                android:src="@drawable/tick_icon"
+
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.textview.MaterialTextView
+
+        android:id="@+id/latitudeTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+
+        android:background="@color/white"
+        android:text="@string/latitude"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10sdp"
+
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:singleLine="true"
+
+        android:textColor="@color/unselectedThumbColor"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/latitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+
+        android:background="@color/white"
+        android:text=""
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10sdp"
+
+        android:inputType="numberDecimal"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:singleLine="true"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+
+        app:layout_constraintTop_toBottomOf="@id/latitudeTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/latitudeInputErrorIcon"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/latitudeInputErrorIcon"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+
+
+        android:visibility="gone"
+        android:src="@drawable/no_input_icon"
+
+        android:layout_marginEnd="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="@id/latitude"
+        app:layout_constraintBottom_toBottomOf="@id/latitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/latitudeDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/latitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+
+        android:id="@+id/longitudeTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+
+        android:background="@color/white"
+        android:text="@string/longitude"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10sdp"
+
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:singleLine="true"
+
+        android:textColor="@color/unselectedThumbColor"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintTop_toBottomOf="@id/latitudeDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/longitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+
+        android:background="@color/white"
+        android:text=""
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10sdp"
+
+        android:inputType="number"
+        android:paddingTop="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:singleLine="true"
+
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+
+        app:layout_constraintTop_toBottomOf="@id/longitudeTag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/longitudeInputErrorIcon"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/longitudeInputErrorIcon"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+
+
+        android:visibility="gone"
+        android:src="@drawable/no_input_icon"
+
+        android:layout_marginEnd="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="@id/longitude"
+        app:layout_constraintBottom_toBottomOf="@id/longitude"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/longitudeDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+
+        app:layout_constraintTop_toBottomOf="@id/longitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_3sdp"
+        tilesource="Mapnik"
+
+        app:layout_constraintTop_toBottomOf="@id/longitudeDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

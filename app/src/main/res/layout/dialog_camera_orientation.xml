@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_corners"
+
+    android:paddingVertical="@dimen/_15sdp"
+    android:backgroundTint="@color/fragmentBgColor"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/backCameraText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/backCamera"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppins_regular"
+
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/backCameraRadioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/backCameraRecommendText"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/backCameraRecommendText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/recommended"
+            android:textColor="@color/unselectedThumbColor"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_regular"
+
+            app:layout_constraintTop_toBottomOf="@id/backCameraText"
+            app:layout_constraintEnd_toStartOf="@id/backCameraRadioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backCameraRadioButton"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:src="@drawable/on_radio_button"
+
+            android:padding="@dimen/_2sdp"
+
+            app:layout_constraintTop_toTopOf="@id/backCameraText"
+            app:layout_constraintStart_toEndOf="@id/backCameraText"
+            app:layout_constraintBottom_toBottomOf="@id/backCameraRecommendText"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frontCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/backCamera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/frontCameraText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="@string/frontCamera"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/poppins_regular"
+
+
+
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/frontCameraRadioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/frontCameraRadioButton"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+
+            android:src="@drawable/off_radio_button"
+            android:padding="@dimen/_2sdp"
+
+            app:layout_constraintTop_toTopOf="@id/frontCameraText"
+            app:layout_constraintStart_toEndOf="@id/frontCameraText"
+            app:layout_constraintBottom_toBottomOf="@id/frontCameraText"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/capitalCancel"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/tabSelecterColor"
+        android:fontFamily="@font/poppins_medium"
+
+        android:padding="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        android:gravity="end"
+        android:layout_marginStart="@dimen/_15sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frontCamera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

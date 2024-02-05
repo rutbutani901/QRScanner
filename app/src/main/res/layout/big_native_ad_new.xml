@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ad_background"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/adSymbol"
+            style="@style/adLayoutAdSymbol"
+
+            android:backgroundTint="@color/mainBackGroundColorGreen"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_4sdp"
+
+            android:text="Ad"
+            android:textColor="@color/whiteColorForBothThemes"
+            android:textSize="@dimen/_10ssp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iconHolderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+
+            app:layout_constraintTop_toBottomOf="@id/adSymbol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/adIcon"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:adjustViewBounds="true"
+                android:src="@color/mainBackGroundColorGreen"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/adTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:maxLines="2"
+
+                android:layout_marginStart="@dimen/_8sdp"
+
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/adIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/adAdvertiser"
+
+                app:layout_constraintVertical_chainStyle="spread_inside"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/adAdvertiser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginStart="@dimen/_8sdp"
+
+
+
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_5sdp"
+                android:textStyle="bold"
+
+
+                android:gravity="bottom"
+                app:layout_constraintStart_toEndOf="@id/adIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/adTitle"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/adDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_5sdp"
+
+
+            android:text=""
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/adDescriptionColor"
+            android:maxLines="2"
+            android:ellipsize="end"
+
+            app:layout_constraintEnd_toEndOf="@id/iconHolderLayout"
+            app:layout_constraintStart_toStartOf="@id/iconHolderLayout"
+            app:layout_constraintTop_toBottomOf="@id/iconHolderLayout"
+            />
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/mediaView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_80sdp"
+
+            android:minWidth="@dimen/_80sdp"
+            android:minHeight="@dimen/_80sdp"
+
+            android:layout_marginVertical="@dimen/_8sdp"
+            app:layout_constraintBottom_toTopOf="@+id/adInstallButton"
+            app:layout_constraintEnd_toEndOf="@id/adDescription"
+            app:layout_constraintStart_toStartOf="@id/adDescription"
+            app:layout_constraintTop_toBottomOf="@id/adDescription"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/adInstallButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+
+            android:background="@drawable/big_ad_button"
+
+            android:text="Install"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/whiteColorForBothThemes"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_1sdp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/adDescription"
+            app:layout_constraintStart_toStartOf="@id/adDescription"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>

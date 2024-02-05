@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ShareFromOtherAppAct"
+    android:backgroundTint="@color/black"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mainBackGroundColorGreen"
+        app:contentInsetStart="0dp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentClipboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_7sdp"
+
+                style="@style/SelectableButtonsBackground"
+                android:clickable="true"
+                android:focusable="true"
+
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_icon"
+
+                app:layout_constraintBottom_toBottomOf="@id/title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:layout_marginStart="@dimen/_18sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/share"
+
+                android:textColor="@color/whiteColorForBothThemes"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/backButton"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+
+       app:layout_constraintTop_toBottomOf="@id/toolbar"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       >
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           >
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/shareMessage1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+
+
+               android:text="@string/useShareInOtherApp"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_12ssp"
+
+               android:fontFamily="@font/poppins_regular"
+               android:layout_marginHorizontal="@dimen/_10sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+
+               />
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/shareMessage2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+
+
+               android:text="@string/example"
+               android:textColor="@color/black"
+               android:textSize="@dimen/_10ssp"
+
+               android:fontFamily="@font/poppins_regular"
+               android:layout_marginHorizontal="@dimen/_10sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/shareMessage1"
+
+               />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/first"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintDimensionRatio="1:1.4"
+                android:src="@drawable/share_first"
+                android:scaleType="centerCrop"
+
+               android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/shareMessage2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/second"
+
+                />
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/second"
+               android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintDimensionRatio="1:1.4"
+
+               android:src="@drawable/share_second"
+               android:scaleType="centerCrop"
+
+               android:layout_marginEnd="@dimen/_8sdp"
+               android:layout_marginStart="@dimen/_5sdp"
+               android:layout_marginTop="@dimen/_10sdp"
+
+               app:layout_constraintTop_toBottomOf="@id/shareMessage2"
+               app:layout_constraintStart_toEndOf="@id/first"
+               app:layout_constraintEnd_toEndOf="parent"
+
+               />
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/third"
+               android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintDimensionRatio="1:1.4"
+
+               android:src="@drawable/share_third"
+               android:layout_marginTop="@dimen/_10sdp"
+             android:layout_marginStart="@dimen/_8sdp"
+               android:layout_marginEnd="@dimen/_5sdp"
+
+               android:scaleType="centerCrop"
+               app:layout_constraintTop_toBottomOf="@id/first"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toStartOf="@id/fourth"
+
+               />
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/fourth"
+               android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintDimensionRatio="1:1.4"
+
+               android:src="@drawable/share_fourth"
+               android:layout_marginTop="@dimen/_10sdp"
+              android:layout_marginStart="@dimen/_5sdp"
+               android:layout_marginEnd="@dimen/_8sdp"
+               android:scaleType="centerCrop"
+
+               app:layout_constraintTop_toBottomOf="@id/second"
+               app:layout_constraintStart_toEndOf="@id/third"
+               app:layout_constraintEnd_toEndOf="parent"
+
+               />
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/fifth"
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+
+               app:layout_constraintDimensionRatio="1:1.4"
+
+               android:src="@drawable/share_five"
+              android:layout_marginVertical="@dimen/_10sdp"
+               android:layout_marginStart="@dimen/_8sdp"
+               android:layout_marginEnd="@dimen/_5sdp"
+
+               android:scaleType="centerCrop"
+               app:layout_constraintTop_toBottomOf="@id/third"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toStartOf="@id/fourth"
+               app:layout_constraintBottom_toBottomOf="parent"
+
+               />
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/sixth"
+               android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                app:layout_constraintDimensionRatio="1:1.4"
+
+               android:src="@drawable/share_six"
+               android:layout_marginVertical="10sp"
+              android:layout_marginStart="@dimen/_5sdp"
+               android:layout_marginEnd="@dimen/_8sdp"
+               android:scaleType="centerCrop"
+
+               app:layout_constraintTop_toBottomOf="@id/fourth"
+               app:layout_constraintStart_toEndOf="@id/third"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+
+               />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

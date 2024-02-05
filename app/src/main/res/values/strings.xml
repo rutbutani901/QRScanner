@@ -1,0 +1,252 @@
+<resources>
+    <string name="app_name" translatable="false">QR Scanner : Barcode Scanner</string>
+
+<!--    <string name="app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>-->
+    <string name="app_id" translatable="false">ca-app-pub-1801792917387699~3406161491</string>
+
+    <string name="feedBackEmail" translatable="false">scannerfeedback09@gmail.com</string>
+    <string name="privacyPolicyLink" translatable="false">https://scannerpolicy.blogspot.com/2023/10/privacy-policy.html</string>
+    <string name="install" translatable="false">Install</string>
+
+    <string name="app_metrica_id" translatable="false">88fe103d-ff14-4e0d-ae10-d44ab23b386d</string>
+
+
+    <string name="appOpenId" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+    <string name="bannerId" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitialId" translatable="false">ca-app-pub-3940256099942544/8691691433</string>
+    <string name="nativeId" translatable="false">ca-app-pub-3940256099942544/1044960115</string>
+
+    <string name="language">Languages</string>
+    <string name="moreQrCodes">More QR Codes</string>
+    <string name="text">Text</string>
+    <string name="email">Email</string>
+    <string name="sms">SMS</string>
+    <string name="app">App</string>
+    <string name="barcodesAndOther2dCodes">Barcodes and other 2D codes</string>
+    <string name="contact">Contact</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="company">Company</string>
+    <string name="jobTitle">JobTitle</string>
+    <string name="phoneNumber">PhoneNumber</string>
+    <string name="streetAddress">StreetAddress</string>
+    <string name="zipCode">ZipCode</string>
+    <string name="city">City</string>
+    <string name="region">Region</string>
+    <string name="country">Country</string>
+    <string name="website">Website</string>
+    <string name="alternatively">Alternatively:</string>
+    <string name="openYourBrowserApp">Open your browser app.</string>
+    <string name="loadTheWebsite">Load the website.</string>
+    <string name="selectShareFromMenu">Select "Share" from the menu.</string>
+    <string name="selectQrScanner">Select "QR Scanner"</string>
+    <string name="shareFromOtherAppMessage">Also see <u><font color="#F0AF51">Use &quot;Share&quot; in other apps</font></u></string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="event">Event</string>
+    <string name="eventTitle">EventTitle</string>
+    <string name="allDayEvent">All-day event</string>
+    <string name="startDate">Start Date</string>
+    <string name="startTime">Start Time</string>
+    <string name="endDate">End Date</string>
+    <string name="endTime">End Time</string>
+    <string name="eventLocation">Event Location</string>
+    <string name="description">Description</string>
+    <string name="location">Location</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="phone">Phone</string>
+    <string name="smallText">text</string>
+    <string name="url">url</string>
+    <string name="http">https://</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="networkName">NetWork Name</string>
+    <string name="password">Password</string>
+    <string name="qrScanner">QR Scanner</string>
+    <string name="value">Value</string>
+    <string name="qrcode">Qr code</string>
+    <string name="date">date</string>
+    <string name="viewCode">View Code</string>
+    <string name="scan">Scan</string>
+    <string name="create">Create</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="useShareInOtherApp">Use "Share" in other apps</string>
+    <string name="example">Example:</string>
+    <string name="type">Type</string>
+    <string name="note">Note</string>
+    <string name="format">Format</string>
+    <string name="printPageLayout">Print Page Layout</string>
+    <string name="print">Print</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="inputText">input text</string>
+    <string name="backCamera">Back Camera</string>
+    <string name="recommended">(Recommended)</string>
+    <string name="frontCamera">Front Camera</string>
+
+
+    <string name="title_activity_qr_from_location">QrFromLocation</string>
+    <string name="cameraPermissionSettingText">Scanning using the Camera is only possible with permission to access the camera</string>
+    <string name="imagePermissionSettingText">Scanning using the Image is only possible with permission to access the files</string>
+    <string name="learnMore"><u>Learn More</u></string>
+    <string name="pickingContactPermissionMessage">Picking data from your contacts will require the permission to read your contacts</string>
+    <string name="deleteEntireMessage">Delete entire history</string>
+    <string name="exit">Exit?</string>
+    <string name="exitMessage">Are you sure you want to exit?</string>
+
+    <string name="capitalCancel">CANCEL</string>
+    <string name="capitalOk">OK</string>
+    <string name="capitalSetting">SETTINGS</string>
+
+    <string name="freeVersion">Free Version</string>
+    <string name="proVersion">Pro Version</string>
+    <string name="noAdvertising">- No Advertising</string>
+    <string name="advancedFeatures">- Advanced Features</string>
+    <string name="oneTimePaymentOf">- one-time payment</string>
+    <string name="wouldYouLikeApp">Would You Like App?</string>
+    <string name="rateMessage">If you enjoy this app, please take a Moment to rate it on Google Playstore</string>
+    <string name="rateUs">Rate us</string>
+    <string name="appTheme">App Theme</string>
+    <string name="systemDefault">System Default</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="contentFromClipBoard">Content from clipboard</string>
+
+    <string name="scanQrCodesBarcodes">Scan QR Codes and Barcodes</string>
+    <string name="deleteAll">Delete All</string>
+    <string name="scanUsingCamera">Scan using The Camera</string>
+    <string name="scanImage">Scan Image</string>
+
+    <string name="help">Help</string>
+    <string name="barcodeFoundPressMeToViewResult">View Result</string>
+    <string name="secondIntroMessage">Avoid common mistakes when scanning barcodes.</string>
+    <string name="premiumFeatures">Premium Features</string>
+    <string name="generalSettings">General Settings</string>
+    <string name="theme">Theme</string>
+    <string name="helpAndFeedBack">Help &amp; Feedback</string>
+    <string name="scanControls">Scan Controls</string>
+    <string name="openWebsiteAuto">Open Website Automatically</string>
+
+    <string name="continousScanning">Continuous Scanning</string>
+    <string name="addScansToHistoryOnly">Add Scans to History Only</string>
+    <string name="duplicateBarcodes">Duplicate Barcodes</string>
+    <string name="storeDuplicateBarcodes">Store Duplicate Barcodes in History</string>
+    <string name="confirmScanManually">Confirm Scans Maually</string>
+    <string name="avoidAccidentalScan">Avoid Accidental Scans</string>
+    <string name="playSound">Play Sound</string>
+    <string name="vibrateOnScan">Vibrate on Scan</string>
+    <string name="copyToClipBoard">Copy To Clipboard</string>
+    <string name="cameraOrientation">Camera Orientation</string>
+    <string name="backCameraRecomd">Back Camera (Recommended)</string>
+    <string name="otherSetting">Other Settings</string>
+    <string name="shareApp">Share App</string>
+    <string name="privacyPolicy">Privacy Policy</string>
+    <string name="feedBack">FeedBack</string>
+    <string name="introduction">Introduction</string>
+    <string name="appVersion">App Version</string>
+
+
+    <string name="textWithoutSpecialCharacters">text without special characters</string>
+    <string name="twelveDigitsWithOneChecksum">12 digits + 1 checksum digit</string>
+    <string name="eightDigits">8 digits</string>
+    <string name="sevenDigitsWithOneChecksum">7 digits+ 1 checksum digit</string>
+    <string name="elevenDigitsWithOneChecksum">11 digits+ 1 checksum digit</string>
+    <string name="textInUpperWithoutSpecial">text in upper case without special characters</string>
+    <string name="digits">digits</string>
+    <string name="evenNumberOfDigits">even number of digits</string>
+    <string name="wpa">WPA/WPA2</string>
+    <string name="wep">WEP</string>
+    <string name="noneWifi">-</string>
+    <string name="giveFeedBack">Give FeedBack</string>
+    <string name="openWebsite">Open Website</string>
+
+    <string name="barCode">Barcode</string>
+    <string name="barcodeFormatNotFound">BarcodeFormatNotFound</string>
+    <string name="connectToWifi">Connect to Wi-Fi</string>
+    <string name="copyPassword">Copy password</string>
+    <string name="copyNetWorkNmae">Copy network name</string>
+    <string name="addToCalender">Add to calender</string>
+    <string name="searchOnWeb">Search on the Web</string>
+    <string name="sendEmail">Send Email</string>
+    <string name="body">Body</string>
+    <string name="sendSms">Send SMS</string>
+    <string name="addContact">Add Contact</string>
+    <string name="showLocation">Show Location</string>
+
+    <string name="ean">EAN</string>
+    <string name="upc">UPC</string>
+    <string name="searchProductOnWeb">Search Product on the Web</string>
+    <string name="searchProductOnEbay">Search on eBay.in</string>
+    <string name="searchProductOnAmazon">Search on Amazon.com</string>
+    <string name="searchProductOnFoodFacts">Search on Open Food Facts</string>
+    <string name="copied">Copied</string>
+    <string name="removeFromFav">Remove from favorites</string>
+    <string name="menuNotes">Notes</string>
+    <string name="addToFav">Add to favorites</string>
+    <string name="viewAddress">View Address</string>
+    <string name="dial">Dial</string>
+    <string name="wifiPassword">WiFi-Password</string>
+    <string name="invalidUrl">Invalid Url</string>
+    <string name="barcodeTypeNotSupported">BarcodeTypeNotSupported</string>
+    <string name="qr">QR</string>
+
+
+    <string name="noInputFoundText">This is a required field</string>
+    <string name="networkConfigurationIncorrect">This network configuration is incorrect</string>
+    <string name="networkConfigurationIncorrectMessage">The encryption method WPA/WPA2 requires a password with at least 8 characters</string>
+
+
+    <string name="invalidBarcodeInputType">The Given Input Is Not Valid for selected type</string>
+    <string name="placeCameraFarer">If QR code is not scanned,Try placing camera more than 10 cm away</string>
+    <string name="noBarcodesFound">No Barcodes Found</string>
+
+
+    <string name="supportedCodes">Supported Codes</string>
+    <string name="tipsForScanning">Tips For Scanning</string>
+    <string name="oneTimePurchase">One-Time Purchase</string>
+    <string name="noSubscription">(no subscription)</string>
+    <string name="noMoreAds">No More Ads</string>
+    <string name="removeDuplicateBarcodes">Remove duplicate Barcodes</string>
+    <string name="lifeTime">Life Time</string>
+    <string name="upgradeNow">Upgrade now</string>
+    <string name="inAppMessage">The pro version is a one-time purchase with no recurring fees. the purchase is stored in the buyer’s google account and can be used across multiple devices including future devices.</string>
+
+
+    <string name="exitApp"><u>Exit App</u></string>
+    <string name="barcodeValueCopied">barcodeValueCopied</string>
+    <string name="purchaseCanceled">Purchase Cancelled</string>
+    <string name="error">Error</string>
+    <string name="purchasePendingCompleteTransaction">purchase pending, complete transaction</string>
+    <string name="failedToPurchase">Failed To purchase</string>
+    <string name="purchaseSuccess">Purchase Success</string>
+    <string name="noPlans">No Plans</string>
+    <string name="purchaseNotFound">purchase not found</string>
+
+    <string name="orientation90">Orientation 90</string>
+    <string name="orientation0">Orientation 0</string>
+    <string name="otherOrientation">Other Orientation</string>
+    <string name="lightOrShadow">Light or Shadow</string>
+    <string name="tooClose">TOO Close / Blurry</string>
+    <string name="ledWhenDark">LED When Dark</string>
+    <string name="lowContrast">Low Contrast</string>
+
+
+    <string name="noClipboardDataFound">no clipboard data found</string>
+    <string name="entryDeleted">Entry Deleted</string>
+    <string name="notGettingImgPath">Not getting imageFile path</string>
+    <string name="actionCanContainAd">This action can contain ad...</string>
+
+
+    <string name="purchaseAlreadyDone">Already Purchased</string>
+
+
+    <string name="contactDetailsNotFound">Contact Details Not Found.May be possible that QR code is corrupted</string>
+    <string name="unableToGetCurrentLocation">Unable to get current location</string>
+    <string name="permissionDenied">Permission denied</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

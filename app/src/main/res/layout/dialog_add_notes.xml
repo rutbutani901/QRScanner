@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/_15sdp"
+
+    android:background="@drawable/rounded_corners"
+    android:backgroundTint="@color/fragmentBgColor"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/inputText"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:backgroundTint="@color/tabSelecterColor"
+        android:singleLine="true"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginHorizontal="@dimen/_15sdp"
+
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/capitalCancel"
+        android:textColor="@color/tabSelecterColor"
+        android:textSize="@dimen/_13ssp"
+        android:padding="@dimen/_3sdp"
+        android:fontFamily="@font/poppins_medium"
+
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+
+
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@id/inputText"
+        app:layout_constraintEnd_toStartOf="@id/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/capitalOk"
+        android:textColor="@color/tabSelecterColor"
+        android:textSize="@dimen/_13ssp"
+        android:padding="@dimen/_3sdp"
+
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@id/inputText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
